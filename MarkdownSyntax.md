@@ -365,6 +365,8 @@ function fancyAlert(arg) {
 }
 ```
 
+GitHub 支持的编程语主高亮列表，请查看 [linguist](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml)。
+
 ### 3.2 任务列表
 
 ```
