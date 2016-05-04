@@ -345,9 +345,9 @@ Markdown 中也可以给使用锚链接，下面这是一个普通的 H2 标题�
 
 ~~Strikethrough 实例~~
 
-## GitHub 支持的 Markdown 语法
+## 3. GitHub 支持的 Markdown 语法
 
-### 语法高亮
+### 3.1 语法高亮
 
     ```javascript
     function fancyAlert(arg) {
@@ -365,7 +365,7 @@ function fancyAlert(arg) {
 }
 ```
 
-### 任务列表
+### 3.2 任务列表
 
 ```
 - [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
@@ -379,7 +379,7 @@ function fancyAlert(arg) {
 - [x] this is a complete item
 - [ ] this is an incomplete item
 
-### SHA 引用
+### 3.3 SHA 引用
 
 GitHub 上每个提交都有一个 SHA-1 hash，用它在文档中添加一个指向 GitHut 提交的链接：
 
@@ -389,7 +389,7 @@ mojombo@16c999e8c71134401a78d4d46435517b2271d6ac
 mojombo/github-flavored-markdown@16c999e8c71134401a78d4d46435517b2271d6ac
 ```
 
-### 同一个仓库中的 Issue 引用
+### 3.4 同一个仓库中的 Issue 引用
 
 类似 SHA 引用，也可以添加指定编码的仓库内 Issue 或 Pull Request 链接：
 
@@ -399,17 +399,17 @@ mojombo#1
 mojombo/github-flavored-markdown#1
 ```
 
-### @某用户
+### 3.5 @某用户
 
 类似微博，也可以在 GitHub Markdown 文档中添加 `@WisdomFusion` 的提醒。
 
-### 自动链接
+### 3.6 自动链接
 
 任何光秃秃的链接都会被自动转为链接的，如
 
 https://github.com/
 
-### emoji
+### 3.7 对 emoji 的支持
 
 这个比较炫酷，文档中还支持 emoji！
 ```
@@ -419,7 +419,7 @@ https://github.com/
 
 emoji列表：http://www.emoji-cheat-sheet.com/
 
-## 参考文档
+## 4. 参考文档
 
 * https://guides.github.com/features/mastering-markdown/
 * https://help.github.com/articles/basic-writing-and-formatting-syntax/
