@@ -1,5 +1,7 @@
 # Markdown 语法参考
 
+## 0. 简述
+
 Markdown 是一种 Lightweight 标记语言，易读、易写、易改，主要为了方便在 Web 端快速书写文档，由转换器转换为 HTML 呈现在 Web 页面上，最初的 Markdown 转换程序，是一个 Perl 脚本。Markdown 可以使用简单的几个字符，如 `#`, `*`, 等，编写出格式丰富的整齐化一的文档来。
 
 现在，越来越多的 Web 程序支持 Markdown 的在线编辑和展示，如：
@@ -15,7 +17,7 @@ Markdown 是一种 Lightweight 标记语言，易读、易写、易改，主要�
 Markdown 文件一般用 `.md` 或 `.markdown` 作为扩展名。
 
 
-## 1. 标准Markdown
+## 1. 标准 Markdown
 
 ### 1.1 加粗和强调
 
