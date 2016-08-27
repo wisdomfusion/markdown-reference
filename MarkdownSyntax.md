@@ -47,7 +47,9 @@ _强调是可以**嵌套**的_
 定义链接的ID后 [example][id]，可以在文档下方再定义链接的目标地址：
 ```
 
+```
     [id]: http://example.com/  "Title"
+```
 
 定义链接的ID后 [example][id]，可以在文档下方再定义链接的目标地址：
 
@@ -73,8 +75,9 @@ _强调是可以**嵌套**的_
 ![图片替换文本（禁止显示图片时会显示此文本）][id]
 ```
 
+```
     [id]: /url/to/img.jpg "图片标题（鼠标放到图片上时会显示此文本）"
-
+```
 
 ### 1.4 标题
 
@@ -137,34 +140,41 @@ Markdown 支持有序列表和无序列表。
    * Item 3b
 
 需要说明的一点是，你在列表标记上使用的数字并不会影响输出的 HTML 结果，上面的列表所产生的 HTML 标记为：
-```
-<ol>
-<li>Bird</li>
-<li>McHale</li>
-<li>Parish</li>
-</ol>
-```
+
+    <ol>
+    <li>Bird</li>
+    <li>McHale</li>
+    <li>Parish</li>
+    </ol>
+
 如果你的列表标记写成：
+
 ```
 1.  Bird
 1.  McHale
 1.  Parish
 ```
+
 甚至是：
+
 ```
 3. Bird
 1. McHale
 8. Parish
 ```
+
 你都会得到完全相同的 HTML 输出。重点在于，你可以让 Markdown 文件的列表数字和输出的结果相同，或是你懒一点，你可以完全不用在意数字的正确性。
 
 如果你使用懒惰的写法，建议第一个项目最好还是从 1. 开始，因为 Markdown 未来可能会支持有序列表的 start 属性。
 
 当然，项目列表很可能会不小心产生，像是下面这样的写法
+
 ```
 1986. What a great season.
 ```
+
 换句话说，也就是在行首出现数字-句点-空白，要避免这样的状况，你可以在句点前面加上反斜杠。
+
 ```
 1986\. What a great season.
 ```
@@ -195,7 +205,7 @@ Markdown 支持有序列表和无序列表。
 #### 1.7.1 行内代码
 
 ```
-行内代码 `<code>`，也可以放在反引号之间：`` <code> ``。
+行内代码 `<code>`，也可以放在两对反引号之间：`` <code> ``。
 ```
 
 行内代码 `<code>`，也可以放在两对反引号之间：`` <code> ``。
@@ -227,6 +237,37 @@ Markdown 支持有序列表和无序列表。
     use Email::Sender::Simple qw(sendmail);
     sendmail($message);
 
+下文也会提到 GitHub 支持的可指定编程语言的代码块，带语法高亮：
+
+    ```<lang-name>
+    ```
+示例输出（注意，这是 GitHub 支持的 Markdown 格式，用其他 Markdown 编辑器要能无法正常解析改代码块）：
+
+```perl
+#!/usr/bin/perl
+use strict;
+use warnings;
+
+# first, create your message
+use Email::MIME;
+my $message = Email::MIME->create(
+  header_str => [
+    From    => 'you@example.com',
+    To      => 'friend@example.com',
+    Subject => 'Happy birthday!',
+  ],
+  attributes => {
+    encoding => 'quoted-printable',
+    charset  => 'ISO-8859-1',
+  },
+  body_str => "Happy birthday to you!\n",
+);
+
+# send the message
+use Email::Sender::Simple qw(sendmail);
+sendmail($message);
+```
+
 ### 1.8 换行
 
 插入一个空白行即可
@@ -244,11 +285,13 @@ Markdown 支持有序列表和无序列表。
 ### 1.10 反斜杠
 
 Markdown 可以利用反斜杠来插入一些在语法中有其它意义的符号，例如：如果你想要用星号加在文字旁边的方式来做出强调效果（但不用 `<em>` 标签），你可以在星号的前面加上反斜杠：
+
 ```
 \*literal asterisks\*
 ```
 
 Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：
+
 ```
 \   反斜线
 `   反引号
@@ -416,6 +459,7 @@ https://github.com/
 ### 3.7 对 emoji 的支持
 
 这个比较炫酷，文档中还支持 emoji！
+
 ```
 :smile: :exclamation: :thumbsup:
 ```
@@ -428,3 +472,4 @@ emoji列表：http://www.emoji-cheat-sheet.com/
 * https://guides.github.com/features/mastering-markdown/
 * https://help.github.com/articles/basic-writing-and-formatting-syntax/
 * http://www.markdown.cn/
+
